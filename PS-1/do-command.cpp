@@ -33,10 +33,10 @@ void do_command(char** argv)
         waitpid(pid, &status, 0);  
 
         std::clock_t end = std::clock();
-        double duration = 1000.0 * (start - end) / CLOCKS_PER_SEC; // ?????  
+        double duration = 1000.0 * (end - start) / CLOCKS_PER_SEC; 
 
         std::cout << "Command completed with " << status << " exit code and took " 
-                  << duration << " seconds" << std::endl; // ???
+                  << duration << " seconds" << std::endl; 
     }
 }
 
